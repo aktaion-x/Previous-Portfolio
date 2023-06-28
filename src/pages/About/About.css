@@ -1,0 +1,92 @@
+.About {
+  color: var(--simi-white-color);
+}
+.About header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-bottom: 150px;
+}
+@media (max-width: 676px) {
+  .About header {
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    text-align: center;
+  }
+  .About header .img {
+    order: -1;
+  }
+}
+.About header .img {
+  max-height: 300px;
+  max-width: 225px;
+  border-radius: 0.5rem;
+  position: relative;
+}
+.About header img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  position: relative;
+  border-radius: 0.3rem;
+}
+.About header .img::before {
+  content: '';
+  position: absolute;
+  top: -10%;
+  left: -15%;
+  width: 130%;
+  height: 100%;
+  background: #000;
+  z-index: -1;
+  border-radius: 0.3rem;
+  background-image: var(--primary-gradient);
+}
+
+.About header .info {
+  flex-basis: 60%;
+}
+.About header .info h1 {
+  font-size: 40px;
+  margin-bottom: 20px;
+}
+.About header .info p {
+  opacity: 0.8;
+  margin-bottom: 15px;
+}
+.About .content section {
+  margin-bottom: 40px;
+  max-width: 90%;
+}
+.About .content section h3 {
+  font-size: 24px;
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+.About .content section h3 small {
+  font-size: 14px;
+  opacity: 0.6;
+}
+.About .content section ul {
+  padding-left: 15px;
+}
+.About .content section li {
+  margin-bottom: 12px;
+  position: relative;
+}
+.About .content section li::before {
+  content: '';
+  position: absolute;
+  left: -20px;
+  top: 50%;
+  transform: translateY(-50%);
+  border-radius: 50rem;
+  border: 3px solid var(--primary-color);
+  width: 8px;
+  height: 8px;
+}
+.About .content section li:hover::before {
+  transition: 0.3s background-color;
+  background-color: var(--primary-color);
+}

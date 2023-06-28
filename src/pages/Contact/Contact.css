@@ -1,0 +1,27 @@
+.Contact h1 {
+  font-size: 50px;
+  margin-bottom: 50px;
+  font-weight: 200;
+}
+.Contact .content ul {
+  padding-left: 15px;
+}
+.Contact .content li {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  font-size: 22px;
+  margin-bottom: 15px;
+  width: fit-content;
+}
+.Contact .content li:hover,
+.Contact .content li:hover a {
+  transition: 0.3s color;
+  color: var(--primary-color);
+}
+.Contact .content li i {
+  font-size: 24px;
+}
+.Contact .content li a {
+  color: var(--simi-white-color);
+}

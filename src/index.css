@@ -1,13 +1,65 @@
-body {
+@import url('https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,200;0,300;0,400;0,600;0,700;1,400&family=Comfortaa:wght@300;400;500;600;700&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Quicksand:wght@300;400;500;600;700&display=swap');
+
+:root {
+  --primary-color: #19a7ce;
+  --secondary-color: #146c94;
+  --simi-white-color: #eeeeee;
+  --dark-color: #0f0e0e;
+  --section-color: #111111;
+  --primary-font: '';
+  --secondary-font: '';
+  --primary-gradient: linear-gradient(45deg, hsl(190deg 86% 3%) 0%, hsl(190deg 100% 2%) 11%, hsl(192deg 100% 2%) 22%, hsl(193deg 100% 2%) 33%, hsl(195deg 100% 2%) 44%, hsl(196deg 100% 2%) 56%, hsl(199deg 100% 1%) 67%, hsl(202deg 100% 1%) 78%, hsl(206deg 100% 1%) 89%, hsl(0deg 0% 0%) 100%);
+}
+html {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  padding: 0;
+  scroll-behavior: smooth;
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: 'Quicksand';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  cursor: default;
+  background: var(--section-color);
+  color: var(--simi-white-color);
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 100px auto;
+  padding: 0 50px;
+}
+::-webkit-scrollbar-track {
+  /* border-radius: 10px; */
+  background-color: var(--simi-white-color);
+}
+
+::-webkit-scrollbar {
+  width: 12px;
+  background-color: var(--simi-white-color);
+}
+
+::-webkit-scrollbar-thumb {
+  width: 50%;
+  border: 2px solid var(--simi-white-color);
+  border-radius: 10px;
+  /* -webkit-box-shadow: inset 0 0 3px 0px var(--secondary-color); */
+  background-color: var(--dark-color);
 }
