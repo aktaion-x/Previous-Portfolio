@@ -55,6 +55,9 @@
 .projects .box .content h3 {
   margin-bottom: 15px;
 }
+.projects .box .content h3 a {
+  color: #fff;
+}
 .projects .box .content h5.features {
   margin-bottom: 10px;
 }

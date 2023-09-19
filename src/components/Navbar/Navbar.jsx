@@ -1,15 +1,14 @@
-import './Navbar.css';
-import logo from '../../assets/logo.png';
-import { Link, NavLink } from 'react-router-dom';
-import { useState } from 'react';
+import "./Navbar.css";
+import { Link, NavLink } from "react-router-dom";
+import { useState } from "react";
 
 const Navbar = () => {
   const [activateNavlinks, setActivateNavlinks] = useState(false);
-  const handleActivateNavlinks = (e) => {
-    e.target.closest('.dropdown').classList.add('active');
+  const handleActivateNavlinks = e => {
+    e.target.closest(".dropdown").classList.add("active");
     setActivateNavlinks(!activateNavlinks);
     setTimeout(() => {
-      e.target.closest('.dropdown').classList.remove('active');
+      e.target.closest(".dropdown").classList.remove("active");
     }, 1000);
   };
   const handleCloseNavlinks = () => {
@@ -19,9 +18,6 @@ const Navbar = () => {
     <div className="Navbar">
       <nav>
         <Link to="/" className="logo">
-          <div className="img">
-            <img src={logo} alt="" />
-          </div>
           <h2>Ghassan Athamin</h2>
         </Link>
         <ul>
@@ -35,10 +31,10 @@ const Navbar = () => {
             <NavLink to="/contact">Contact</NavLink>
           </li>
           <li className="dropdown" onClick={handleActivateNavlinks}>
-            <i className="fa-solid fa-bars-staggered"></i>
+            <i className="fa-solid fa-bars-staggered" />
           </li>
         </ul>
-        <div className={activateNavlinks ? 'nav-links active' : 'nav-links'}>
+        <div className={activateNavlinks ? "nav-links active" : "nav-links"}>
           <ul>
             <li>
               <NavLink onClick={handleCloseNavlinks} to="/about">
